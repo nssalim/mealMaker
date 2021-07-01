@@ -12,6 +12,8 @@ const menu = {
         mains: [],
         desserts: [],
       },
+    
+    // getter and setter methods for the appetizers, mains, and desserts properties
       get appertizers(){
         return this._courses.appetizers;
       },
@@ -21,5 +23,15 @@ const menu = {
       get desserts(){
         return this._courses.deserts;
       },
-    };
+    
+      set appertizers(appertizers){
+        this._courses.appetizers = appetizers;
+      },
+      set mains(mains){
+        this._courses.mains = mains;
+      },
+      set desserts(desserts){
+        this._courses.desserts = deserts;
+      },
+      };
     
