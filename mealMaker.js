@@ -56,6 +56,18 @@ const menu = {
     
     // to obtain a random dish from a course on the menu(necessary for generating a random meal)
     getRandomDishFromCourse(courseName){
-      
-      },
+    // retrieve the array of the given course’s dishes from the menu‘s _courses object and store in a variable called dishes
+      const dishes = this.courses(courseName);
+    // generate a random index by multiplying Math.random() by the length of the dishes array (This will guarantee that the random number will be between 0 and the length of the array)
+    // round generated number to a whole number
+      const randomIndex = (Math.floor(Math.random()) * dishes.length);
+    // return the dish located at that index in dishes
+      return dishes(randomIndex);
+    },
+    generateRandomMeal(){
+      const appertizers = this.getRandomDishFrom('appetizers');
+        const mains = this.getRandomDishFrom('mains');
+          const desserts = this.getRandomDishFrom('desserts');
+      }
     };
+        
