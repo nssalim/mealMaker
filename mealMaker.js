@@ -33,5 +33,14 @@ const menu = {
       set desserts(desserts){
         this._courses.desserts = deserts;
       },
-      };
-    
+     
+    // getter method for courses and return object that contains key/value pairs for appetizers, mains and desserts properties
+      get courses(){
+        return {
+          appetizers: this.appetizers,
+          mains: this.mains,
+          desserts: this.desserts,
+        }
+      },
+    };
+      
